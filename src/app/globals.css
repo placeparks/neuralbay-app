@@ -20,11 +20,19 @@
 }
 
 body {
-  background: linear-gradient(
-    to right,
-    rgba(33, 13, 70, 1),
-    rgba(1, 0, 31, 1)     
-  );
+  background-image: url('/assets/Background.png');
+  background-repeat: none;
+  background-position: center;
+  background-size: cover;
+}
+
+
+.bgimage{
+  background-image: url('/assets/Herobg.png');
+  background-repeat: none;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
 }
 
 .ibm-plex-mono-semibold {
