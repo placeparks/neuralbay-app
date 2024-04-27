@@ -23,7 +23,7 @@ const Navbar = () => {
   };
   return (
     <div>
-<nav className="bg-[rgba(54,46,116,0.7)]  dark:bg-opacity-25 dark:bg-gray-900 relative w-full z-50 top-0 start-0 dark:border-gray-600">
+<nav className="bg-customNavBlue-light  dark:bg-opacity-25 dark:bg-gray-900 relative w-full z-50 top-0 start-0 dark:border-gray-600">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a
             href="/"

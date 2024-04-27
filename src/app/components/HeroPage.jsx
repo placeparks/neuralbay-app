@@ -24,7 +24,7 @@ const Hero = () => {
 
   return (
     <div className='md:h-screen h-[110vh] relative -mt-20 overflow-hidden'>
-    <video autoPlay muted loop className='videoOverlay z-0'>
+    <video autoPlay muted loop className='videoOverlay z-0 opacity-40'>
         <source src="/assets/vidhero.mp4" type="video/mp4" />
     </video>
     <section className="z-10 absolute inset-0 flex items-center justify-center">

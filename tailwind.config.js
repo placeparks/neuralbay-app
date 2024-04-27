@@ -19,7 +19,8 @@ module.exports = {
         },
         
         customNavBlue:{
-          light: 'rgba(34, 26, 96, 1)',
+          light: 'rgba(1, 0, 31, 0.5)',
+          medium:'rgba(54,46,116,0.5)',
           dark:'rgba(1, 0, 31, 1)',
           },
       },

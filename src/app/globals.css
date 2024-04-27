@@ -20,6 +20,11 @@
 }
 
 body {
+  background: linear-gradient(
+    to right,
+    rgba(33, 13, 70, 1),
+    rgba(1, 0, 31, 1)     
+  );
 }
 
 .ibm-plex-mono-semibold {
