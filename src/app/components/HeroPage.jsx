@@ -1,32 +1,46 @@
 "use client"
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import Image from 'next/image';
 import Button from './Buttons/ButtonFill';
 import ButtonFill2 from './Buttons/ButtonFill2';
 
 const Hero = () => {
-    const [style, setStyle] = useState({ lineHeight: '5rem'});
+  const [style, setStyle] = useState({ lineHeight: '5rem' });
+  const videoRef = useRef(null);
 
-    useEffect(() => {
-      function handleResize() {
-        if (window.innerWidth < 768) {  
-          setStyle({ lineHeight: '3rem'});  
-        } else {
-          setStyle({ lineHeight: '5rem'}); 
+
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth < 768) {  
+        setStyle({ lineHeight: '3rem'});  
+      } else {
+        setStyle({ lineHeight: '5rem'}); 
+      }
+    }
+
+    window.addEventListener('resize', handleResize);
+    handleResize(); 
+
+    // Attempt to play video on load
+    const playVideo = async () => {
+      if (videoRef.current) {
+        try {
+          await videoRef.current.play();
+        } catch (error) {
+          console.error("Video play failed:", error);
         }
       }
-  
-      window.addEventListener('resize', handleResize);
-      handleResize(); 
-  
-      return () => window.removeEventListener('resize', handleResize);
-    }, []);
+    };
+    playVideo();
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <div className='bgimage md:h-screen h-[110vh] relative -mt-20 overflow-hidden'>
-      <video autoPlay muted loop className='videoOverlay z-0 opacity-40 mix-blend-exclusion'>
-        <source src="/assets/vidhero.mp4" type="video/mp4" />
-      </video>
+       <video autoPlay muted loop playsInline className='videoOverlay z-0 opacity-40 mix-blend-exclusion' ref={videoRef}>
+          <source src="/assets/vidhero.mp4" type="video/mp4" />
+        </video>
     <section className="z-10 absolute inset-0 flex items-center justify-center">
         <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
           <div className="pt-20 md:pt-0 col-span-3 mr-auto place-self-center lg:col-span-6">
