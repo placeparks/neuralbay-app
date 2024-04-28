@@ -1,0 +1,63 @@
+/* Base styles for the card */
+.card {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden; /* Clip the children to the card's rounded corners */
+    z-index: 10; /* Set a stacking context for the card */
+}
+
+/* Pseudo-elements for the animated borders */
+.card::before,
+.card::after,
+.card > *::before,
+.card > *::after {
+    content: "";
+    position: absolute;
+    background-color: rgba(57, 48, 145, 1); /* Color for the animated elements */
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth transition for the transform */
+    z-index: 20; /* Ensure they are above the card's content */
+}
+
+/* Top border animation */
+.card::before {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    transform: translate3d(-100%, 0, 0); /* Start hidden to the left */
+}
+
+/* Bottom border animation */
+.card::after {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    transform: translate3d(100%, 0, 0); /* Start hidden to the right */
+}
+
+/* Left border animation */
+.card > *::before {
+    top: -10px; /* Extend further to cover rounded corners */
+    left: 0;
+    height: calc(100% + 20px); /* Extend past top and bottom edges */
+    width: 2px;
+    transform: translate3d(0, -100%, 0); /* Start hidden above */
+}
+
+/* Right border animation */
+.card > *::after {
+    bottom: -10px; /* Extend further to cover rounded corners */
+    right: 0;
+    height: calc(100% + 20px); /* Extend past top and bottom edges */
+    width: 2px;
+    transform: translate3d(0, 100%, 0); /* Start hidden below */
+}
+
+/* Hover state transformations */
+.card:hover::before,
+.card:hover::after,
+.card:hover > *::before,
+.card:hover > *::after {
+    transform: translate3d(0, 0, 0); /* Bring into view */
+}

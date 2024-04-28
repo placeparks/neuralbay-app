@@ -8,7 +8,6 @@ const Hero = () => {
   const [style, setStyle] = useState({ lineHeight: '5rem' });
   const videoRef = useRef(null);
 
-
   useEffect(() => {
     function handleResize() {
       if (window.innerWidth < 768) {  
@@ -44,7 +43,7 @@ const Hero = () => {
     <section className="z-10 absolute inset-0 flex items-center justify-center">
         <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
           <div className="pt-20 md:pt-0 col-span-3 mr-auto place-self-center lg:col-span-6">
-          <p className='text-transparent text-1xl font-medium gradient-text bg-gradient-to-r from-customPurple-light to-customPurple-dark to-customPurple-dark animate-gradient tracking-widest'>WELCOME TO NEURALBAY</p>
+          <p className='text-transparent text-1xl font-medium gradient-text animate-gradient'>WELCOME TO NEURALBAY</p>
                       <h1 className=" max-w-2xl mb-4 text-3xl font-extrabold tracking-tight text-white md:text-5xl xl:text-5xl poppins-extrabold" style={style}>
     Discover, Experiment, Buy & Sell Pretrained <span className='text-transparent bg-gradient-to-r from-customBlue-light to-customBlue-dark to-customBlue-dark gradient-text2'>AI</span> Models
 </h1>
@@ -60,12 +59,11 @@ const Hero = () => {
 
         </div>
       </section>
-      <div className="absolute bottom-0 md:-bottom-12 left-0 w-full z-20">
-                <Image src='/assets/Ellipse.png' layout="responsive" width={1440} height={100} alt='' objectFit="cover" />
+      <div className="absolute -bottom-2 md:-bottom-10 left-0 w-full z-20 ">
+                <Image src='/assets/Ellipse.png' layout="responsive" width={1440} height={300} alt='' objectFit="cover" />
             </div>
       </div>
   )
 }
 
 export default Hero;
-

@@ -28,7 +28,11 @@ module.exports = {
           light: 'rgba(1, 0, 31, 0.5)',
           medium:'rgba(54,46,116,0.5)',
           dark:'rgba(1, 0, 31, 1)',
-          },
+        },
+        customCardColor: {
+          dark: 'rgba(8, 7, 40, 1)',
+          light:'rgba(57, 48, 145, 1)'
+        }
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -44,19 +48,7 @@ module.exports = {
       animation: {
         gradient: "gradient 7s linear infinite",
       },
-      animation: {
-        shimmer: "shimmer 2s linear infinite",
-      },
-      keyframes: {
-        shimmer: {
-          from: {
-            backgroundPosition: "0 0",
-          },
-          to: {
-            backgroundPosition: "-200% 0",
-          },
-        },
-      },
+     
     },
   },
   plugins: [

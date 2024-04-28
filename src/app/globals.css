@@ -208,31 +208,32 @@ body {
 .gradient-text {
   background: linear-gradient(
     to right,
-    rgba(61, 49, 193, 1) 0%,      
-    rgba(182, 46, 167, 1) 20%,    
-    rgba(112, 17, 153, 1) 40%,     
-    rgb(70, 4, 98) 60%,           
-    rgba(182, 46, 167, 1) 80%,    
-    rgba(112, 17, 153, 1) 90%,    
-    rgba(61, 49, 193, 1) 100%      
+    rgba(61, 49, 193, 1) ,      
+    rgba(182, 46, 167, 1) ,    
+    rgba(112, 17, 153, 1) ,     
+    rgba(182, 46, 167, 1) ,    
+    rgba(112, 17, 153, 1),    
+    rgba(61, 49, 193, 1)      
   );
   background-size: 200% 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-clip: text;
   animation: gradient 3s linear infinite;
 }
 
 .gradient-text2 {
   background: linear-gradient(
     to right,
-    rgba(61, 49, 193, 1), /* Light blue */
-    rgba(152, 95, 241, 1) /* Dark blue */
+    rgba(61, 49, 193, 1),
+    rgba(182, 46, 167, 1) ,  
+    rgba(152, 95, 241, 1),
+    rgba(61, 49, 193, 1),
+    rgba(182, 46, 167, 1) ,  
+    rgba(152, 95, 241, 1) 
   );
-  background-size: 200% 100%;
+  background-size: 300% 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent; 
+  animation: gradient 5s linear infinite;
 }
 
 @media (min-width: 768px) { /* or whatever your 'md' breakpoint is */
@@ -303,3 +304,50 @@ body {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.4); }
 }
+
+
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+
+
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.gradient-mask {
+  position: relative;
+  width: 500px; 
+  height: 600px; 
+  background: linear-gradient(
+    to right, 
+    rgba(250, 194, 118, 1), 
+    rgba(208, 98, 179, 1), 
+    rgba(76, 87, 207, 1)
+  );
+  background-size: 300% 300%;
+  animation: moveGradient 4s linear infinite;
+  -webkit-mask: url('/assets/Group.png') center / contain no-repeat;
+  mask: url('/assets/Group.png') center / contain no-repeat;
+  margin-left: auto;
+}
+
+
+@media (max-width: 768px) {
+  .gradient-mask {
+    width: 250px; 
+    height: 300px; 
+  }
+}
+
