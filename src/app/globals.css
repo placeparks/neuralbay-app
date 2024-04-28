@@ -35,6 +35,14 @@ body {
   width: 100%;
 }
 
+.bgsection{
+  background-image: url('/assets/BgEllipse.png');
+  background-repeat: none;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.7;
+}
+
 .ibm-plex-mono-semibold {
   font-family: "IBM Plex Mono", monospace;
   font-weight: 600;
@@ -233,38 +241,65 @@ body {
   }
 }
 
-@keyframes glowing-border-animation {
-  0%, 16.66% {
-    box-shadow: 
-      0 -8px 10px rgba(152, 95, 241, 0.6),  /* top */
-      8px 0 10px rgba(48, 35, 185, 0.6);    /* right */
-  }
-  33.33%, 50% {
-    box-shadow: 
-      8px 0 10px rgba(152, 95, 241, 0.6);  /* right */
-  }
-  66.66%, 83.33% {
-    box-shadow: 
-      -8px 0 10px rgba(152, 95, 241, 0.6),  /* left */
-      0 -8px 10px rgba(48, 35, 185, 0.6);   /* top */
-  }
-  100% {
-    box-shadow: 
-      0 -8px 10px rgba(152, 95, 241, 0.6);  /* top */
-  }
-}
-
-.card-border {
+/* ButtonStyles.css */
+.buttonContainer {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 22px;
+  border-radius: 9999px;
+  font-weight: 500;
+  font-size: 16px;
+  color: white;
+  background: linear-gradient(to right, rgba(152, 95, 241, 1), rgba(48, 35, 185, 1));
+  box-shadow: 0 4px 14px 0 rgba(0, 118, 255, 0.39);
+  transition: all 200ms ease-linear;
+  cursor: pointer;
   overflow: hidden;
-  border-radius: 20px;
-  background: linear-gradient(
-    to bottom,
-    rgba(18, 17, 61, 1), /* Light blue */
-    rgba(7, 2, 50, 1) /* Dark blue */
-  );
-  animation: glowing-border-animation 8s infinite linear;
+  width: 155px; /* Set a specific width or make it auto */
+  height: 47px; /* Set a specific height */
+}
+
+.buttonContainer:hover {
+  box-shadow: 0 6px 20px rgba(0, 118, 255, 0.23);
+  background: linear-gradient(to right, rgba(79, 12, 183, 1), rgba(4, 2, 22, 1));
 }
 
 
+.star {
+  position: absolute;
+  color: white;
+  transition: transform 300ms ease-in-out;
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+.buttonContainer:hover .star {
+  animation: sparkle 1.5s infinite alternate ease-in-out;
+  transform: scale(1.2);
+}
 
+.star1 {
+  top: 50%;
+  left: 21%;
+  font-size: 10px;
+  transform: scale(1);
+}
+
+.star2 {
+  top: 29%;
+  left: 24%;
+  font-size: 7px;
+  transform: scale(1);
+}
+
+.star3 {
+  top: 30%;
+  left: 25%;
+  font-size: 15px;
+  transform:scale(1);
+}
+
+@keyframes sparkle {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.4); }
+}

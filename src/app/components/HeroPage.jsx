@@ -50,7 +50,7 @@ const Hero = () => {
 </h1>
             <p className="max-w-2xl mb-6 font-light text-gray-400 lg:mb-8 md:text-lg lg:text-xl poppins-regular">A platform that allows individuals and organisations to buy and sell pretrained AI models and services securely and transparently using blockchain technology.</p>
             <div className='flex flex-row gap-2 md:gap-8'>
-              <Button title='Explore' iconSrc='/assets/Star.png'/>
+              <Button title='Explore'/>
               <ButtonFill2 title='Create' />
          </div>
           </div>

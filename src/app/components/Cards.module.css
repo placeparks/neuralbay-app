@@ -1,0 +1,89 @@
+.cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card, .card4 {
+    height: 439px;
+    background: linear-gradient(rgba(18, 17, 61, 1), rgba(7, 2, 50, 1));
+    border-radius: 40px 40px 0 0;
+    padding: 32px 24px;
+    gap: 8px;
+    box-sizing: border-box;
+    transition: transform 700ms ease-in-out, border 700ms linear;
+    cursor: pointer;
+    transform: scale(1);
+}
+
+.card:hover, .card4:hover {
+    transform: scale(1.10);  /* Zooms in the card by 10% */
+}
+
+.card {
+    width: 367px;  
+}
+
+.card4 {
+    width: 1180px;  
+    border: 0;
+    border-right: 3px solid transparent;
+}
+
+.default, .variant2, .variant4 {
+    border: 3px solid transparent;
+}
+
+.default {
+    border-top: 3px solid rgba(152, 95, 241, 1); /* Purple gradient start color */
+}
+
+.variant2 {
+    border-left: 3px solid rgba(48, 35, 185, 1); /* Blue gradient end color */
+}
+
+.variant4 {
+    border-right: 3px solid rgba(152, 95, 241, 1); /* Purple gradient start color */
+}
+
+.cardImage {
+    width: 100%;  /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 40px 40px 0 0; /* Rounded top corners */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+.cardContent {
+    flex: 1; 
+}
+
+
+@media (min-width: 768px) {
+    .card4 {
+        flex-direction: row-reverse;  /* Image on the right for the fourth card */
+        align-items: center;  /* Align items vertically in the center */
+        justify-content: center;  /* Center the container content horizontally */
+        border-radius: 40px;
+    }
+
+    .cardImage {
+        width: 50%; 
+        border-radius: 40px 0 0 40px; /* Rounded corners for the image */
+    }
+
+    .cardContent {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;  /* Center the content vertically */
+        align-items: flex-start;  /* Align text to the start (left) */
+        padding: 0 24px;  /* Optional padding for better spacing */
+    }
+
+    .card:first-child .cardImage, .card:nth-child(2) .cardImage, .card:nth-child(3) .cardImage {
+        width: 193px;  /* Fixed width for images in the first three cards */
+        height: 193px;  /* Fixed height for images */
+        margin: auto;  /* Center the image within the card */
+    }
+}
