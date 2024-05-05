@@ -44,12 +44,12 @@ const Cards = () => {
         <div className={`flex flex-col md:flex-row md:flex-wrap justify-center gap-12 p-4 ${styles.cardsContainer}`}>
         {cardsContent.map((card, index) => (
           <div key={index} className={`flex flex-col ${index === 3 ? styles.card4 : styles.card} ${styles[variant]}`}>
-            <div className='flex justify-center'>
-            <Image src={card.imageSrc} alt={card.title} width={200} height={200} />
+            <div className='flex justify-center mb-3.5'>
+              <Image src={card.imageSrc} alt={card.title} width={200} height={200} className='h-48 w-customWidth'  />
             </div>
                 <div className={styles.cardContent}>
-                    <h1 className='text-3xl font-bold tracking-tight text-white poppins-bold'>{card.title}</h1>
-                    <p className='font-normal text-xl text-gray-400 poppins-regular'>{card.description}</p>
+                    <h1 className='text-2xl poppins-bold tracking-tight text-white poppins-bold mb-2.5'>{card.title}</h1>
+                    <p className='text-lg text-gray-400 poppins-regular leading-7'>{card.description}</p>
                 </div>
             </div>
         ))}

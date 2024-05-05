@@ -1,0 +1,28 @@
+.card {
+    width: 491px;
+    height: 180px;
+    border-radius: 40px;
+    border: 1px solid transparent; /* Transparent border uses the background for the gradient */
+    padding: 32px 24px;
+  
+    gap: 10px;
+    background: linear-gradient(to bottom, rgba(18, 17, 61, 1), rgba(7, 2, 50, 1));
+    background-clip: padding-box; /* Ensures the gradient is within the padding area */
+    color: white; /* Assuming you want a light text color */
+    box-sizing: border-box; /* Includes padding in the width and height */
+}
+
+.cardButton {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(to right, rgba(152, 95, 241, 1), rgba(48, 35, 185, 1));
+    color: white;
+    outline: none;
+    transition: background 500ms ease-out; /* Transition for hover effect */
+}
+
+.cardButton:hover {
+    background: linear-gradient(to right, rgba(250, 194, 118, 1), rgba(208, 98, 179, 1), rgba(76, 87, 207, 1));
+}

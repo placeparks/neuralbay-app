@@ -19,13 +19,25 @@
   }
 }
 
+/* Importing Proxima Nova SemiBold */
+@font-face {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 600; /* Semi-bold */
+  src: url('/fonts/proxima-nova/ProximaNova-Semibold.otf') format('opentype');
+}
+.textProxima {
+  font-family: 'Proxima Nova', sans-serif; 
+  font-weight: 600;
+}
+
+
 body {
   background-image: url('/assets/Background.png');
   background-repeat: none;
   background-position: center;
   background-size: cover;
 }
-
 
 .bgimage{
   background-image: url('/assets/Herobg.png');
@@ -43,6 +55,32 @@ body {
   opacity: 0.7;
 }
 
+.InnovationImg2{
+  margin-top: 190px;
+z-index: -1;
+height: fit-content;
+width: 100%;
+}
+
+.InnovationImg{
+  height: 100%;
+  background: linear-gradient(
+    to bottom, /* Adjust the direction if needed */
+    rgba(1, 0, 31, 0.57),
+    rgba(1, 0, 31, 1),
+    rgba(1, 0, 31, 0.43),
+    rgba(1, 0, 31, 0.43),
+    rgba(1, 0, 31, 0.6433),
+    rgba(1, 0, 31, 0.99),
+    rgba(1, 0, 31, 1)
+  );
+}
+
+.ibm-plex-mono-medium {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 500;
+  font-style: normal;
+} 
 .ibm-plex-mono-semibold {
   font-family: "IBM Plex Mono", monospace;
   font-weight: 600;
@@ -208,12 +246,10 @@ body {
 .gradient-text {
   background: linear-gradient(
     to right,
-    rgba(61, 49, 193, 1) ,      
-    rgba(182, 46, 167, 1) ,    
-    rgba(112, 17, 153, 1) ,     
-    rgba(182, 46, 167, 1) ,    
-    rgba(112, 17, 153, 1),    
-    rgba(61, 49, 193, 1)      
+    rgba(182, 46, 167, 1),  
+    rgba(112, 17, 153, 1), 
+    rgba(182, 46, 167, 1),  
+    rgba(112, 17, 153, 1)       
   );
   background-size: 200% 100%;
   background-clip: text;
@@ -224,10 +260,8 @@ body {
   background: linear-gradient(
     to right,
     rgba(61, 49, 193, 1),
-    rgba(182, 46, 167, 1) ,  
     rgba(152, 95, 241, 1),
     rgba(61, 49, 193, 1),
-    rgba(182, 46, 167, 1) ,  
     rgba(152, 95, 241, 1) 
   );
   background-size: 300% 300%;
@@ -341,6 +375,30 @@ body {
   -webkit-mask: url('/assets/Group.png') center / contain no-repeat;
   mask: url('/assets/Group.png') center / contain no-repeat;
   margin-left: auto;
+  height: 861px;
+  width: 649px;
+}
+
+
+@keyframes moveBlob {
+  0%, 100% {
+    top: 0;
+    left: 100px;
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translateX(60%) translateY(70%);
+  }
+}
+
+.blob {
+  position: absolute;
+  margin-left: 33%;
+  z-index: 0;
+  top: 0;
+  left: 100px;
+  opacity: 0.4;
+  animation: moveBlob 4s ease-in-out infinite; /* Adjust the duration as needed */
 }
 
 

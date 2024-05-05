@@ -37,16 +37,16 @@ const Explore = () => {
     ];
 
     return (
-        <div className='h-screen mb-20'>
-        <div className='z-0 flex justify-end gradient-mask mt-10 md:mt-32'></div>
-      <div className='z-10 text-white flex flex-col -mt-96 p-4 pl-8 md:pl-32 md:w-3/5 w-full'>
-        <p className="text-transparent mb-4 font-medium gradient-text2 animate-gradient tracking-widest -mt-0 md:-mt-80">
+        <div className='h-screen'>
+                  <div className='z-10 text-white flex flex-col p-4 pl-8 md:pl-32 md:w-[60rem] w-full leading-12'>
+        <p className="textProxima text-transparent gradient-text animate-gradient text-2xl tracking-[.15em]">
           DISCOVER & EXPLORE
         </p>     
-        <h1 className='poppins-semibold text-3xl md:text-5xl leading-[3rem]'>Discover An Extensive Range of <span className='text-transparent bg-gradient-to-r from-customBlue-light to-customBlue-dark to-customBlue-dark gradient-text2'>AI Models</span> To Explore</h1>
+        <h1 className=' poppins-semibold text-3xl md:text-basecustom'>Discover An Extensive Range of <span className='text-transparent bg-gradient-to-r from-customBlue-light to-customBlue-dark to-customBlue-dark gradient-text2'>AI Models</span> To Explore</h1>
           </div>
-            
-          <div className='flex flex-wrap justify-center gap-12 p-4 md:p-0 mt-0 md:-mt-28'>
+        <div className='z-0 flex justify-end gradient-mask -mt-28'></div>
+       
+          <div className='absolute flex flex-wrap justify-center gap-12 p-4 md:p-0 mt-0 md:-mt-[43rem]'>
             {cardData.map((card, index) => (
                 <div key={index} className={`${styles.card} max-w-sm p-6 bg-customCardColor-dark shadow-md`}>
                     <div className='flex flex-row justify-between mb-4'>

@@ -27,12 +27,12 @@ const Card = () => {
     <div className={` transition duration-300 ease-in-out ${variantClasses[variant]} transform scale-80 hover:scale-100`}>
         <div className='relative bg-gradient-to-r from-[#12113D] to-[#070132] rounded-tr-2xl rounded-tl-2xl shadow-lg border-3 border-transparent'>
           <a href="#" className="flex md:flex-row flex-col items-center">
-            <img className="rounded-t-lg pt-2 md:pt-0 md:rounded-none md:rounded-l-lg w-full md:w-3/4" src="/assets/Frame4.png" alt="Create Personalized AI Solutions" />
-            <div className="flex flex-col justify-between p-4 leading-normal">
-              <h5 className="mb-2 text-3xl font-bold tracking-tight text-white poppins-bold">Create Personalized AI Solutions</h5>
-              <p className="mb-3 font-normal text-xl text-gray-400 poppins-regular">Fully customized and personalized AI tools designed to deliver robust and scalable AI solutions.</p>
+            <div className="flex flex-col justify-between p-10 leading-normal">
+              <h5 className="mb-2 text-3xl font-bold tracking-tight text-white poppins-bold leading-10 tracking-wide">Create Personalized AI Solutions</h5>
+              <p className="mb-3 w-5/6 font-normal text-xl text-gray-400 poppins-regular">Fully customized and personalized AI tools designed to deliver robust and scalable AI solutions.</p>
             </div>
-          </a>
+           <img className="rounded-t-lg pt-2 md:pt-0 md:rounded-none md:rounded-l-lg w-full md:w-3/4" src="/assets/Frame4.png" alt="Create Personalized AI Solutions" />
+        </a>
         </div>
       </div>
     </div>

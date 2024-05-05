@@ -48,9 +48,22 @@ module.exports = {
       animation: {
         gradient: "gradient 7s linear infinite",
       },
-     
+      width: {
+        customWidth: '276px',
+      },
+      lineHeight: {
+        'extra-loose': '2.5',
+        '12': '82.5px',
+      },
+      fontSize: {
+        basecustom: ['3.438rem', {
+          lineHeight: '5.16rem',
+          letterSpacing: '0.01em',
+        }],
+      },
     },
   },
+ 
   plugins: [
     // rest of the code
     addVariablesForColors

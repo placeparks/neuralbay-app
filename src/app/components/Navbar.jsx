@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import Button from "./Buttons/ButtonFill";
+import Button from "./Buttons/ButtonSimple2";
 import ButtonSimple from "./Buttons/ButtonSimple";
 
 const Navbar = () => {
@@ -23,14 +23,14 @@ const Navbar = () => {
   };
   return (
     <div>
-<nav className="bg-customNavBlue-light  dark:bg-opacity-25 dark:bg-gray-900 relative w-full z-50 top-0 start-0 dark:border-gray-600">
+<nav className="fixed bg-customNavBlue-light  dark:bg-opacity-25 dark:bg-gray-900  w-full z-50 top-0 start-0 dark:border-gray-600">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a
             href="/"
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             <Image src="/assets/logo.png" width={35} height={35} alt="Logo" />
-            <span className="text-white self-center text-1xl font-semibold whitespace-nowrap dark:text-white font-sans">
+            <span className="text-white self-center text-xl whitespace-nowrap dark:text-white ibm-plex-mono-medium">
               Neuralbay
             </span>
           </a>
@@ -70,7 +70,7 @@ const Navbar = () => {
             } w-full md:block md:w-auto`}
             id="navbar-dropdown"
           >
-            <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <ul className="flex flex-col poppins-medium text-base p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
               <li>
                 <a
                   href="#"
